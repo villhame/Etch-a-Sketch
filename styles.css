@@ -83,13 +83,41 @@ body, h1, h2, p, .footer {
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
 
-.Grid{ 
+.Slider{ 
     display: flex;
-    flex: 10;
+    flex: 1;
     justify-content: center;
-    font-size: 50vw;
+    font-size: 5vw;
+    background: url('images/etch-a-sketch.png');
+    width: 75vw;
+    height: 5vh;
+    
+}
+.Slider:hover {
+    opacity: 1;
+  }
+
+/* Style for the container */
+.Grid {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1vw;
+    /* justify-content: center; */
+    /* width: 800px; You can adjust the width as needed */
 }
 
+/* Style for individual grid cells (divs) */
+.Cell {
+    width: 5vw; /* Adjust the cell width as needed */
+    height: 5vw;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 1px;
+}
+.Cell:hover {
+    box-shadow: #121212 0 0 0 1px, transparent 0 0 0 0;
+  }
 
 .footer {
     text-align: center;
