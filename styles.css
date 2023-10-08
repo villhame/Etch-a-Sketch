@@ -71,12 +71,12 @@ body, h1, h2, p, .footer {
     touch-action: manipulation;
 
     /* made the font scale */
-    font-size: 0.5vw;
+    font-size: 2vw;
     font-weight: 700;
 
     /* Set both width and height to create square buttons */
-    width: 5vw;
-    height: 5vw;  
+    width: 10vw;
+    height: 10vw;  
 }
 
 .card:hover {
@@ -101,27 +101,40 @@ body, h1, h2, p, .footer {
 
 /* Style for the container */
 .Grid {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 10;
-    font-size: 1vw;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 1px; /* Adjust the gap between cells as needed */
     width: 500px;
     height: 500px;
-    /* justify-content: center; */
-    /* width: 800px; You can adjust the width as needed */
-}
+    justify-content: center;
+  }
 
 /* Style for individual grid cells (divs) */
-.Cell {
-    width: 6%; /* Adjust the cell width as needed */
+/* .Cell {
+    width: 6%; /
     width: 6%;
     background-color: white;
     border: 1px solid #ccc;
     box-sizing: border-box;
     margin: 1px;
-}
+} */
+
+.Cell {
+    aspect-ratio: 1 / 1; /* Ensure the cells are always square */
+    background-color: white;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    /* You can adjust the width/height here if necessary, but aspect-ratio should maintain squareness */
+    margin: auto;
+    cursor: pointer;
+      /* Increase the width and height to make the cells larger */
+  width: 100%; /* Adjust the width as needed */
+  height: 100%; /* Adjust the height as needed */
+  }
+
 .Cell:hover {
     box-shadow: #121212 0 0 0 1px, transparent 0 0 0 0;
+    /* background-color: black; */
   }
 
 .footer {
